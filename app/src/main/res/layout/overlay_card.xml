@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:background="#ffffff"
+    android:padding="20dp" android:elevation="12dp">
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView android:id="@+id/cardTitle"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textSize="22sp" android:textColor="#0d4827"
+            android:textStyle="bold" android:layout_centerVertical="true"/>
+        <Button android:id="@+id/cardClose"
+            android:layout_width="36dp" android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:text="\u2715" android:textSize="16sp"
+            android:textColor="#999" android:backgroundTint="#eee" />
+    </RelativeLayout>
+
+    <TextView android:id="@+id/cardStep"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:textSize="15sp" android:textColor="#e65100"
+        android:layout_marginTop="4dp" />
+
+    <View android:layout_width="match_parent" android:layout_height="1dp"
+        android:background="#eee" android:layout_marginVertical="12dp" />
+
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1"
+        android:maxHeight="300dp">
+        <TextView android:id="@+id/cardText"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="20sp" android:textColor="#1a1a1a"
+            android:lineSpacingExtra="6dp" />
+    </ScrollView>
+
+    <TextView android:id="@+id/cardTip"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:textSize="14sp" android:textColor="#888"
+        android:background="#f5f5f5" android:padding="10dp"
+        android:layout_marginTop="10dp" />
+
+    <TextView android:id="@+id/cardProgress"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:textSize="16sp" android:textColor="#e65100"
+        android:layout_marginTop="10dp" />
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="horizontal"
+        android:gravity="center" android:layout_marginTop="12dp">
+        <Button android:id="@+id/cardPrev"
+            android:layout_width="0dp" android:layout_height="48dp"
+            android:layout_weight="1" android:layout_marginEnd="4dp"
+            android:backgroundTint="#f0f0f0"
+            android:text="\u2190 \u4E0A\u4E00\u6B65"
+            android:textSize="16sp" android:textColor="#333" />
+        <Button android:id="@+id/cardRepeat"
+            android:layout_width="48dp" android:layout_height="48dp"
+            android:layout_marginHorizontal="4dp"
+            android:backgroundTint="#1a6b3c"
+            android:text="\uD83D\uDD0A" android:textSize="20sp" />
+        <Button android:id="@+id/cardNext"
+            android:layout_width="0dp" android:layout_height="48dp"
+            android:layout_weight="1" android:layout_marginStart="4dp"
+            android:backgroundTint="#e65100"
+            android:text="\u4E0B\u4E00\u6B65 \u2192"
+            android:textSize="16sp" android:textColor="#fff" />
+    </LinearLayout>
+</LinearLayout>
