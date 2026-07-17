@@ -15,10 +15,12 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - name: Install Gradle
-        uses: gradle/actions/setup-gradle@v3
       - name: Build APK
-        run: gradle assembleDebug
+        run: |
+          mkdir -p gradle/wrapper
+          curl -sL -o gradle/wrapper/gradle-wrapper.jar https://raw.githubusercontent.com/gradle/gradle/v8.2.0/gradle/wrapper/gradle-wrapper.jar
+          chmod +x gradlew
+          ./gradlew assembleDebug
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
