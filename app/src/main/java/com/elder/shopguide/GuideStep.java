@@ -1,4 +1,4 @@
-﻿package com.elder.shopguide;
+package com.elder.shopguide;
 
 public class GuideStep {
     public String icon;
